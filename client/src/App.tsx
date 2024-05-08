@@ -4,7 +4,7 @@ function App() {
   const [text, setText] = useState<string>('hehh');
 
   async function sendMessage() {
-    const res = await fetch('http://localhost:3001/messages', {
+    const res = await fetch('http://localhost:8080/messages', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
