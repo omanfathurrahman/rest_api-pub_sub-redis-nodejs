@@ -25,7 +25,6 @@ app.get('/', async (req: Request, res: Response) => {
 
 app.post('/messages', (req: Request, res: Response) => {
   const text = req
-  console.log(text.body.text)
   client.publish('client', text.body.text)
   res.json({ message: 'Message sent' })
 })
